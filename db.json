@@ -1,0 +1,350 @@
+
+ [
+        {
+            "label": "Basic",
+            "name": "basic",
+            "sections": [
+                {
+                    "label": "Personal Information",
+                    "name": "personalInformation",
+                    "fields": [
+                        {
+                            "label": "Title",
+                            "type": "input",
+                            "enumKey": "NAME_PREFIX",
+                            "apiGroup": "userInformation",
+                            "apiGroupType": "",
+                            "apiSection": "basicInformation",
+                            "apiSectionType": "",
+                            "isEditable": "Y",
+                            "bulk_label": "Title",
+                            "id": "title",
+                            "name": "title",
+                            "inputType": "select",
+                            "options": [
+                                {
+                                    "value": "Ms",
+                                    "key": "PR_MISS"
+                                },
+                                {
+                                    "value": "M/S",
+                                    "key": "PR_MS"
+                                },
+                                {
+                                    "value": "Mr",
+                                    "key": "PR_MR"
+                                },
+                                {
+                                    "value": "Mrs",
+                                    "key": "PR_MRS"
+                                }
+                            ],
+                            "values": ""
+                        },
+                        {
+                            "label": "First Name",
+                            "type": "input",
+                            "inputType": "text",
+                            "apiGroup": "userInformation",
+                            "apiGroupType": "",
+                            "apiSection": "basicInformation",
+                            "apiSectionType": "",
+                            "isEditable": "Y",
+                            "bulk_label": "First Name",
+                            "id": "firstName",
+                            "name": "firstName",
+                            "validations": [
+                                {
+                                    "name": "required",
+                                    "validator": "required",
+                                    "message": "First Name is mandatory"
+                                },
+                                {
+                                    "name": "pattern",
+                                    "validator": "^[a-zA-Z ]*$",
+                                    "message": "Only alphabets and space is allowed"
+                                }
+                            ],
+                            "values": ""
+                        },
+                        {
+                            "label": "Last Name",
+                            "type": "input",
+                            "inputType": "text",
+                            "apiGroup": "userInformation",
+                            "apiGroupType": "",
+                            "apiSection": "basicInformation",
+                            "apiSectionType": "",
+                            "isEditable": "Y",
+                            "bulk_label": "Last Name",
+                            "id": "lastName",
+                            "name": "lastName",
+                            "validations": [
+                                {
+                                    "name": "required",
+                                    "validator": "required",
+                                    "message": "Last Name is mandatory"
+                                },
+                                {
+                                    "name": "pattern",
+                                    "validator": "^[a-zA-Z ]*$",
+                                    "message": "Only alphabets and space are allowed"
+                                }
+                            ],
+                            "values": ""
+                        },
+                        {
+                            "label": "Profile Photo URI",
+                            "type": "input",
+                            "inputType": "text",
+                            "apiGroup": "userInformation",
+                            "apiGroupType": "",
+                            "apiSection": "basicInformation",
+                            "apiSectionType": "",
+                            "isEditable": "Y",
+                            "bulk_label": "Uploaded Profile Photo Document Id",
+                            "id": "profilePhotoURI",
+                            "name": "profilePhotoURI",
+                            "validations": [
+                                {
+                                    "name": "pattern",
+                                    "validator": "^[a-zA-Z0-9:/.-]*$",
+                                    "message": "Profile Photo URI is invalid"
+                                }
+                            ],
+                            "values": ""
+                        },
+                        {
+                            "label": "Preferred Language",
+                            "type": "input",
+                            "inputType": "select",
+                            "apiGroup": "userInformation",
+                            "apiGroupType": "",
+                            "apiSection": "basicInformation",
+                            "apiSectionType": "",
+                            "isEditable": "Y",
+                            "bulk_label": "Preferred Language",
+                            "id": "preferredLanguage",
+                            "name": "preferredLanguage",
+                            "validations": [
+                                {
+                                    "name": "required",
+                                    "validator": "required",
+                                    "message": "Language is mandatory"
+                                },
+                                {
+                                    "name": "pattern",
+                                    "validator": "^[a-zA-Z ]*$",
+                                    "message": "Preferred Language is invalid"
+                                }
+                            ],
+                            "values": ""
+                        },
+                        {
+                            "label": "Login ID",
+                            "type": "input",
+                            "inputType": "text",
+                            "apiGroup": "userInformation",
+                            "apiGroupType": "",
+                            "apiSection": "basicInformation",
+                            "apiSectionType": "",
+                            "isEditable": "Y",
+                            "isUnique": "Y",
+                            "isIdentifier": "Y",
+                            "bulk_label": "Login ID",
+                            "id": "loginId",
+                            "name": "loginId",
+                            "validations": [
+                                {
+                                    "name": "required",
+                                    "validator": "required",
+                                    "message": "Login Id is mandatory"
+                                },
+                                {
+                                    "name": "pattern",
+                                    "validator": "^[a-zA-Z0-9]{3,20}$",
+                                    "message": "Only alphabets and digits are allowed and max length is 20"
+                                }
+                            ],
+                            "values": ""
+                        },
+                        {
+                            "label": "Email Address",
+                            "type": "input",
+                            "inputType": "text",
+                            "apiGroup": "userInformation",
+                            "apiGroupType": "",
+                            "apiSection": "basicInformation",
+                            "apiSectionType": "",
+                            "isEditable": "Y",
+                            "isUnique": "Y",
+                            "isIdentifier": "Y",
+                            "IsVerificationRequired": "N",
+                            "bulk_label": "Email ID",
+                            "id": "emailId",
+                            "name": "emailId",
+                            "validations": [
+                                {
+                                    "name": "required",
+                                    "validator": "required",
+                                    "message": "Email Id is mandatory"
+                                },
+                                {
+                                    "name": "pattern",
+                                    "validator": "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]*$",
+                                    "message": "Please provide a valid email id"
+                                }
+                            ],
+                            "values": ""
+                        },
+                        {
+                            "label": "Contact Number",
+                            "type": "input",
+                            "inputType": "text",
+                            "allowedValuesPattern": "77|78xxxxxxxxx",
+                            "apiGroup": "userInformation",
+                            "apiGroupType": "",
+                            "apiSection": "basicInformation",
+                            "apiSectionType": "",
+                            "isEditable": "Y",
+                            "isUnique": "Y",
+                            "isIdentifier": "N",
+                            "IsVerificationRequired": "N",
+                            "bulk_label": "Mobile Number",
+                            "id": "mobileNumber",
+                            "name": "mobileNumber",
+                            "validations": [
+                                {
+                                    "name": "required",
+                                    "validator": "required",
+                                    "message": "Contact Number is mandatory"
+                                },
+                                {
+                                    "name": "pattern",
+                                    "validator": "^(77|78)[0-9]{6,10}$",
+                                    "message": "Contact Number is invalid"
+                                }
+                            ],
+                            "values": ""
+                        },
+                        {
+                            "label": "Date Of Employment",
+                            "type": "input",
+                            "inputType": "date",
+                            "allowedValuesPattern": "YYYY-MM-DD",
+                            "apiGroup": "userInformation",
+                            "apiGroupType": "",
+                            "apiSection": "basicInformation",
+                            "apiSectionType": "",
+                            "isEditable": "Y",
+                            "maxDate": "CURRENT_DATE",
+                            "dateRangeError": "Future Dates are not allowed",
+                            "bulk_label": "Date Of Employment",
+                            "id": "dateOfEmployment",
+                            "name": "dateOfEmployment",
+                            "values": ""
+                        }
+                    ]
+                },
+                {
+                    "label": "Address Information",
+                    "name": "addressInformation",
+                    "fields": [
+                        {
+                            "label": "Country",
+                            "type": "input",
+                            "inputType": "select",
+                            "enumKey": "COUNTRY_CODE",
+                            "apiGroup": "userInformation",
+                            "apiGroupType": "",
+                            "apiSection": "basicInformation",
+                            "apiSectionType": "",
+                            "isEditable": "Y",
+                            "bulk_label": "Country Name",
+                            "id": "country",
+                            "name": "country",
+                            "validations": [
+                                {
+                                    "name": "required",
+                                    "validator": "required",
+                                    "message": "Country is mandatory"
+                                },
+                                {
+                                    "name": "pattern",
+                                    "validator": "^[a-zA-Z ]*$",
+                                    "message": "Country is invalid"
+                                }
+                            ],
+                            "values": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Profile",
+            "name": "profileInformation",
+            "sections": [
+                {
+                    "label": "Profile Information",
+                    "name": "profileSection",
+                    "fields": [
+                        {
+                            "label": "Security Profile",
+                            "type": "input",
+                            "inputType": "select",
+                            "apiGroup": "profileDetails",
+                            "apiGroupType": "",
+                            "apiSection": "",
+                            "apiSectionType": "",
+                            "isEditable": "Y",
+                            "bulk_label": "Security Profile",
+                            "id": "securityProfile",
+                            "name": "securityProfile",
+                            "validations": [
+                                {
+                                    "name": "required",
+                                    "validator": "required",
+                                    "message": "Security Profile is mandatory"
+                                },
+                                {
+                                    "name": "pattern",
+                                    "validator": "^[a-zA-Z0-9_.]*$",
+                                    "message": "Security Profile is invalid"
+                                }
+                            ],
+                            "values": ""
+                        },
+                        {
+                            "label": "Authorization Profile",
+                            "type": "input",
+                            "inputType": "select",
+                            "apiGroup": "profileDetails",
+                            "apiGroupType": "",
+                            "apiSection": "",
+                            "apiSectionType": "",
+                            "isEditable": "Y",
+                            "bulk_label": "Authorisation Profile",
+                            "id": "authProfile",
+                            "name": "authProfile",
+                            "validations": [
+                                {
+                                    "name": "required",
+                                    "validator": "required",
+                                    "message": "Authorization Profile is mandatory"
+                                },
+                                {
+                                    "name": "pattern",
+                                    "validator": "^[a-zA-Z0-9_-]*$",
+                                    "message": "Authorization Profile is invalid"
+                                }
+                            ],
+                            "values": ""
+                        }
+                    ]
+                }
+            ]
+        }
+        
+]
+  
